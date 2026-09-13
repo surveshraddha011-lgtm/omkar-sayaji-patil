@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Omkar ♡</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:Georgia,serif;
+    background:
+        radial-gradient(circle at top,#3b2945,#17131d 65%);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:620px;
+}
+
+.card{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border-radius:28px;
+    padding:38px 25px;
+    box-shadow:0 25px 70px rgba(0,0,0,.4);
+    text-align:center;
+}
+
+.hidden{
+    display:none;
+}
+
+.emoji{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+h1{
+    font-size:31px;
+    font-weight:normal;
+    margin:10px 0 15px;
+}
+
+p{
+    line-height:1.8;
+    color:#ddd1db;
+}
+
+.sub{
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin:7px 0;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.07);
+    color:#fff;
+    font-family:inherit;
+    font-size:16px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.14);
+}
+
+.start{
+    background:#ead7e3;
+    color:#251b27;
+    border:none;
+    margin-top:20px;
+}
+
+.question{
+    font-size:25px;
+    line-height:1.45;
+    margin:22px 0;
+}
+
+.progress{
+    font-size:13px;
+    color:#bcaeba;
+}
+
+.reaction{
+    font-size:17px;
+    min-height:30px;
+    margin:10px 0 18px;
+    color:#e8d9e4;
+}
+
+.bar{
+    width:100%;
+    height:5px;
+    background:rgba(255,255,255,.1);
+    border-radius:10px;
+    margin-bottom:25px;
+}
+
+.barFill{
+    height:100%;
+    width:0%;
+    border-radius:10px;
+    background:#ead7e3;
+    transition:.4s;
+}
+
+.message{
+    font-size:18px;
+    line-height:2;
+}
+
+.big{
+    font-size:25px;
+    line-height:1.6;
+}
+
+.heart{
+    font-size:45px;
+    margin:15px;
+}
+
+.tiny{
+    font-size:12px;
+    color:#9f909e;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- INTRO -->
+
+<div class="card" id="intro">
+
+<div class="emoji">🫵🏻</div>
+
+<h1>Omkar.</h1>
+
+<p class="sub">
+
+Congratulations.<br>
+You've been selected for the extremely unofficial<br>
+
+<b>"What The Hell Is Going On Inside Your Head?"</b>
+
+<br><br>
+
+There will be no essays.<br>
+No "tell me everything."<br>
+No viva examination. 😭
+
+<br><br>
+
+Just tap whatever feels closest.
+
+</p>
+
+<button class="start" onclick="startGame()">
+Okay fine, let's go →
+</button>
+
+<p class="tiny">
+P.S. You are allowed to choose the stupid option.
+Actually, you're encouraged to.
+</p>
+
+</div>
+
+
+<!-- GAME -->
+
+<div class="card hidden" id="game">
+
+<div class="progress" id="progress"></div>
+
+<div class="bar">
+<div class="barFill" id="bar"></div>
+</div>
+
+<div class="question" id="question"></div>
+
+<div class="reaction" id="reaction"></div>
+
+<div id="options"></div>
+
+</div>
+
+
+<!-- FINAL -->
+
+<div class="card hidden" id="final">
+
+<div class="heart">♡</div>
+
+<h1>Okay. Come here.</h1>
+
+<div class="message">
+
+<p>
+I don't actually know what's been going on with you lately.
+</p>
+
+<p>
+Maybe it's your career.<br>
+Maybe it's something from the past.<br>
+Maybe it's something entirely different.
+</p>
+
+<p>
+And I don't want to assume.
+</p>
+
+<p>
+I just know that sometimes your voice sounds a little quieter...
+and somehow that makes me worry about you more than you probably realise.
+</p>
+
+<p>
+I know you don't have to tell me everything.
+And I'm not asking you to.
+</p>
+
+<p>
+But please don't ever think that you have to carry everything alone.
+</p>
+
+<p>
+You don't need the perfect words.
+You don't need to explain yourself.
+You don't even need to talk.
+</p>
+
+<p>
+You can just sit beside me.
+</p>
+
+<p>
+And I'll stay.
+</p>
+
+<p class="big">
+
+Because if you ever tell me<br>
+that you're feeling cold...
+
+<br><br>
+
+<strong>
+I'd knit my arteries into a cardigan
+just to keep you warm.
+</strong>
+
+</p>
+
+<p>
+So yes, idiot.
+I'm worried about you.
+</p>
+
+<p>
+But more than that—
+
+<br>
+
+<b>
+I'm here.
+</b>
+
+</p>
+
+<p>
+Whenever you need me.
+Even when you don't know how to ask.
+</p>
+
+</div>
+
+<div class="heart">🫂</div>
+
+<p class="tiny">
+Now go drink some water. I'm serious.
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+const questions = [
+
+{
+q:"First things first… how's your brain doing these days?",
+o:[
+"🟢 Peaceful. Surprisingly.",
+"🟡 Loading… please wait.",
+"🟠 47 tabs open.",
+"🔴 Don't ask. I'm surviving.",
+"🫠 I have become one of the tabs."
+],
+r:[
+"Good. Keep that energy. 😌",
+"Ah. The loading screen. Classic.",
+"47?! Close some tabs, sir. 😭",
+"Okay… noted. No interrogation.",
+"Honestly, understandable."
+]
+},
+
+{
+q:"What's occupying the most space in that head of yours?",
+o:[
+"💼 Career & future",
+"🕰️ Things from the past",
+"💭 The future in general",
+"🧠 Literally everything",
+"🫥 Something I don't want to talk about"
+],
+r:[
+"Yeah… that can get heavy.",
+"Some things really don't leave quietly.",
+"Future anxiety is a professional sport at this point.",
+"Ah yes. The 'everything' package.",
+"That's okay. You don't have to."
+]
+},
+
+{
+q:"When you suddenly go quiet, what's usually happening?",
+o:[
+"🤐 I need some space",
+"🧠 I'm overthinking",
+"😮‍💨 I'm mentally exhausted",
+"🫥 I don't know what's wrong myself",
+"🗿 I simply become a statue"
+],
+r:[
+"Okay. Space can be understood.",
+"Overthinking deserves jail sometimes.",
+"Yeah… that sounds exhausting.",
+"That's actually okay. You don't always need an answer.",
+"Statue Omkar has entered the chat."
+]
+},
+
+{
+q:"When life gets too much, what do you secretly prefer?",
+o:[
+"🫂 Someone staying close",
+"👂 Someone just listening",
+"🤡 Someone distracting me",
+"🧍 Someone sitting silently beside me",
+"🚪 Everyone leave me alone for a bit"
+],
+r:[
+"Noted. 🫂",
+"Okay. No fixing. Just listening.",
+"Distraction department reporting for duty.",
+"Silence can say enough.",
+"Okay. I'll respect that."
+]
+},
+
+{
+q:"How good are you at saying 'I'm not okay'?",
+o:[
+"10/10. Very honest.",
+"6/10. Depends on the person.",
+"3/10. I usually keep it inside.",
+"0/10. Absolutely terrible.",
+"What's 'not okay'? 😭"
+],
+r:[
+"Respect.",
+"Fair enough.",
+"Yeah… keeping everything inside gets heavy.",
+"Okay. I won't force the words out of you.",
+"Sir. Please. 😭"
+]
+},
+
+{
+q:"If something is bothering you, what would make it easier to talk about?",
+o:[
+"🫂 Someone simply staying",
+"👂 Knowing I won't be judged",
+"☕ A quiet conversation",
+"😂 Being distracted first",
+"⌛ Time. I need time."
+],
+r:[
+"I can do staying.",
+"No judgement. Promise.",
+"Quiet conversations are underrated.",
+"I can absolutely provide nonsense.",
+"Take your time."
+]
+},
+
+{
+q:"Random important question: what's your preferred emotional support package?",
+o:[
+"🤝 'I've got you.'",
+"🫂 Hug. No questions.",
+"🍟 Food fixes approximately 83% of problems.",
+"😂 Make me laugh.",
+"🧍 Just don't leave."
+],
+r:[
+"Simple. I like it.",
+"Noted. 🫂",
+"Scientific research confirms this.",
+"Challenge accepted.",
+"That one says a lot."
+]
+},
+
+{
+q:"Okay… do you know what happens when your voice gets unusually quiet?",
+o:[
+"Nothing?",
+"People notice?",
+"You worry?",
+"Shraddha starts overthinking™?",
+"All of the above 😭"
+],
+r:[
+"Incorrect answer. 😭",
+"Yes. People notice.",
+"Exactly.",
+"Unfortunately… yes.",
+"THANK YOU FOR YOUR HONESTY."
+]
+},
+
+{
+q:"If you were having the worst day and I showed up, what would you want?",
+o:[
+"🫂 Hug",
+"☕ Sit with me",
+"😂 Make me forget it for a while",
+"👂 Let me talk",
+"❤️ Just knowing you're there is enough"
+],
+r:[
+"Come here then.",
+"Deal.",
+"I have several terrible jokes prepared.",
+"I'll listen.",
+"Then consider me there."
+]
+},
+
+{
+q:"Last serious question…",
+o:[
+"Uh oh.",
+"Proceed.",
+"I'm scared.",
+"Why does this feel like an exam?",
+"Okay, madam. Ask."
+],
+r:[
+"Don't worry. No marks. 😭",
+"Here goes.",
+"You should be.",
+"Because you're dramatic.",
+"Good boy. 😂"
+]
+},
+
+{
+q:"If life ever gets too heavy, would you let me carry a tiny bit of it?",
+o:[
+"Okay. 🫂",
+"Fine. But only a little.",
+"Maybe.",
+"I'll think about it.",
+"…yes."
+],
+r:[
+"That's all I wanted.",
+"I'll take my 2%.",
+"That's enough.",
+"Take your time.",
+"Come here. 🫂"
+]
+},
+
+{
+q:"And finally… if you ever need me at 2 AM?",
+o:[
+"📞 Call me.",
+"🫂 Come over.",
+"💬 Text me.",
+"😴 I'll probably be asleep.",
+"❤️ You'll know."
+],
+r:[
+"Okay. Deal.",
+"Already on my way.",
+"Even if it's just one word.",
+"Fine. I'll forgive you.",
+"Yeah. I think I will."
+]
+}
+
+];
+
+let current=0;
+
+function startGame(){
+
+document.getElementById("intro").classList.add("hidden");
+document.getElementById("game").classList.remove("hidden");
+
+showQuestion();
+
+}
+
+function showQuestion(){
+
+const item=questions[current];
+
+document.getElementById("progress").innerText=
+`Question ${current+1} of ${questions.length}`;
+
+document.getElementById("bar").style.width=
+((current)/questions.length*100)+"%";
+
+document.getElementById("question").innerText=item.q;
+
+document.getElementById("reaction").innerText="";
+
+const options=document.getElementById("options");
+
+options.innerHTML="";
+
+item.o.forEach((option,index)=>{
+
+const btn=document.createElement("button");
+
+btn.innerText=option;
+
+btn.onclick=()=>choose(index);
+
+options.appendChild(btn);
+
+});
+
+}
+
+function choose(index){
+
+const item=questions[current];
+
+document.getElementById("reaction").innerText=
+item.r[index];
+
+document.querySelectorAll("#options button").forEach(btn=>{
+btn.disabled=true;
+});
+
+setTimeout(()=>{
+
+current++;
+
+if(current>=questions.length){
+
+document.getElementById("game").classList.add("hidden");
+document.getElementById("final").classList.remove("hidden");
+
+}else{
+
+showQuestion();
+
+}
+
+},900);
+
+}
+
+</script>
+
+</body>
+</html>
